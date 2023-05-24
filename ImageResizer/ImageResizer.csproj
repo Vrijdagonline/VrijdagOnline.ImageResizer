@@ -1,8 +1,10 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    <StaticWebAssetBasePath>/</StaticWebAssetBasePath>
     <ContentTargetFolders>.</ContentTargetFolders>
     <Product>ImageResizer</Product>
     <PackageId>ImageResizer</PackageId>
@@ -22,7 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="App_Plugins\ImageResizer\**" ExcludeFromSingleFile="true" CopyToPublishDirectory="Always" />
     <None Include="buildTransitive\**" Pack="true" PackagePath="buildTransitive" />
   </ItemGroup>
 
