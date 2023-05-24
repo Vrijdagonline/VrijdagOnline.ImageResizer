@@ -1,7 +1,7 @@
 
 # VrijdagOnline.ImageResizer
 
-This project is based on [@prjseal's SmallerImages](https://www.github.com/prjseal/SmallerImages) but rewritten for Umbraco CMS 10+. 
+This project is based on [@prjseal's SmallerImages](https://www.github.com/prjseal/SmallerImages) but rewritten for Umbraco CMS 11+. 
 
 Reduce image size that is being uploaded to the back-office by setting a maximum width and height with the idea to save disk space and improve page speed.
 
