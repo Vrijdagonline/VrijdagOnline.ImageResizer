@@ -5,6 +5,8 @@ This project is based on [@prjseal's SmallerImages](https://www.github.com/prjse
 
 Reduce image size that is being uploaded to the back-office by setting a maximum width and height with the idea to save disk space and improve page speed.
 
+![Logo](https://img.shields.io/nuget/dt/VrijdagOnline.ImageResizer?label=Downloads)
+
 # Installation
 Simply add the package using donet add package:
 ```
