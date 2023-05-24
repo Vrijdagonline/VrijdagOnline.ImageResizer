@@ -20,7 +20,6 @@ You can change these default settings by adding the section to the appsettings.j
     "ImageResizeWidth": 1920,
     "ImageResizeHeight": 1080,
     "ImageResizeSuffix": "_resized",
-    "ImageResizeKeepOriginal": false,
     "ImageResizeUpscale": false,
     "ImageResizePreviewWidth": 240,
     "ImageResizePreviewHeight": 136,
@@ -36,11 +35,6 @@ You can change these default settings by adding the section to the appsettings.j
 Change the ImageResizeApplyToExistingImages value to true in appsettings.json
 ```
 "ImageResizeApplyToExistingImages": true,
-```
-#### I want to keep the original image
-Change the ImageResizeKeepOriginal value to true in appsettings.json
-```
-"ImageResizeKeepOriginal": true,
 ```
 #### I want to turn on image crop preview
 Change the ImageResizeKeepPreview value to true in appsettings.json
