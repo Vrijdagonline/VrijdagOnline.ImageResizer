@@ -1,11 +1,11 @@
 
 # VrijdagOnline.ImageResizer
 
-This project is based on [@prjseal's SmallerImages](https://www.github.com/prjseal/SmallerImages) but rewritten for Umbraco CMS 11+. 
+This project is based on [@prjseal's SmallerImages](https://www.github.com/prjseal/SmallerImages) but rewritten for Umbraco 11+. 
 
 Reduce image size that is being uploaded to the back-office by setting a maximum width and height with the idea to save disk space and improve page speed.
 
-[![NuGet](https://img.shields.io/nuget/dt/VrijdagOnline.ImageResizer?label=Downloads)](https://www.nuget.org/packages/VrijdagOnline.ImageResizer/)
+[![NuGet](https://img.shields.io/nuget/dt/VrijdagOnline.ImageResizer?label=Downloads&color=green)](https://www.nuget.org/packages/VrijdagOnline.ImageResizer/)
 
 # Installation
 Simply add the package using donet add package:
