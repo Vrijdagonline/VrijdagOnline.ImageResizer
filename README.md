@@ -10,7 +10,7 @@ Reduce image size that is being uploaded to the back-office by setting a maximum
 # Installation
 Simply add the package using donet add package:
 ```
-dotnet add package vrijdagonline.imageresizer
+dotnet add package VrijdagOnline.ImageResizer --version 1.0.0
 ```
 
 # Settings
