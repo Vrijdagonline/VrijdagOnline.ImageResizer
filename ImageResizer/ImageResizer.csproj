@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
     <ContentTargetFolders>.</ContentTargetFolders>
     <Product>ImageResizer</Product>
-    <PackageId>ImageResizer</PackageId>
+    <PackageId>VrijdagOnline.ImageResizer</PackageId>
     <Title>ImageResizer</Title>
     <Authors>VrijdagOnline</Authors>
     <Description>Reduce image size that is being uploaded to the back-office by setting a maximum width and height with the idea to save disk space and improve page speed.</Description>
@@ -28,13 +28,6 @@
 
   <ItemGroup>
     <None Include="..\README.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
