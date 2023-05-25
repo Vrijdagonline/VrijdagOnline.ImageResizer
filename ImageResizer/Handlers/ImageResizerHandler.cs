@@ -12,6 +12,7 @@ using Size = SixLabors.ImageSharp.Size;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Options;
 using ImageResizer.Settings;
+using Umbraco.Cms.Core.Scoping;
 
 namespace ImageResizer.Handlers
 {
@@ -20,18 +21,21 @@ namespace ImageResizer.Handlers
         private readonly IWebHostEnvironment _hostingEnvironment;
         private readonly IOptions<ImageResizerSettings> _resizerSettings;
         private readonly IMediaService _mediaService;
+        private readonly IScopeProvider _scopeProvider;
         private readonly MediaUrlGeneratorCollection _mediaUrlGeneratorCollection;
 
         public ImageResizerHandler(IWebHostEnvironment hostingEnvironment,
             IOptions<ImageResizerSettings> resizerSettings,
             IMediaService mediaService,
-            MediaUrlGeneratorCollection mediaUrlGeneratorCollection)
+            MediaUrlGeneratorCollection mediaUrlGeneratorCollection,
+            IScopeProvider scopeProvider)
         {
             //Dependency Injection
             _hostingEnvironment = hostingEnvironment;
             _resizerSettings = resizerSettings;
             _mediaService = mediaService;
             _mediaUrlGeneratorCollection = mediaUrlGeneratorCollection;
+            _scopeProvider = scopeProvider;
         }
 
         /// <summary>
@@ -87,6 +91,10 @@ namespace ImageResizer.Handlers
                                 {
                                     if (CreateCroppedVersionOfTheFile(imageSize.Item1, imageSize.Item2, fileNameSuffix, imageResizeKeepOriginal, serverFilePath))
                                     {
+
+                                        using var scope = _scopeProvider.CreateScope(autoComplete: true);
+                                        using var _ = scope.Notifications.Suppress();
+
                                         mediaItem.SetValue("umbracoWidth", imageSize.Item1);
                                         mediaItem.SetValue("umbracoHeight", imageSize.Item2);
 
