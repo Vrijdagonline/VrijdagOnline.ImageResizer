@@ -14,6 +14,7 @@
     <RepositoryUrl>https://github.com/Vrijdagonline/VrijdagOnline.ImageResizer</RepositoryUrl>
     <PackageTags>umbraco, package, images, resize, back-office, .net core</PackageTags>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageVersion>1.0.1</PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>
