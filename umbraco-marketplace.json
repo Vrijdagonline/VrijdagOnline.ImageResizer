@@ -1,0 +1,14 @@
+{
+  "$schema": "https://marketplace.umbraco.com/umbraco-marketplace-schema.json",
+  "AuthorDetails": {
+    "Name": "VrijdagOnline",
+    "Description": "We create tailor-made Umbraco websites, webshops and portals, applying a Profit by Design® philosophy.",
+    "Url": "https://vrijdagonline.nl",
+    "ImageUrl": "https://vrijdagonline.nl/media/iqbhjztx/vrijdagonline-profile.png",
+    "SyncContributorsFromRepository": false
+  },
+  "IssueTrackerUrl": "https://github.com/Vrijdagonline/VrijdagOnline.ImageResizer/issues",
+  "Category": "Developer Tools",
+  "LicenseTypes": [ "Free" ],
+  "PackageType": "Package"
+}

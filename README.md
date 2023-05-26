@@ -8,9 +8,9 @@ Reduce image size that is being uploaded to the back-office by setting a maximum
 [![NuGet](https://img.shields.io/nuget/dt/VrijdagOnline.ImageResizer?label=Downloads&color=green)](https://www.nuget.org/packages/VrijdagOnline.ImageResizer/)
 
 # Installation
-Simply add the package using donet add package:
+Simply add the package by using donet add package to install the latest version:
 ```
-dotnet add package VrijdagOnline.ImageResizer --version 1.0.3
+dotnet add package VrijdagOnline.ImageResizer
 ```
 
 # Settings
@@ -52,7 +52,8 @@ Change the ImageResizeKeepPreview value to true in appsettings.json
 # Changelog
 ### 1.0.3
 - Added the Umbraco Marketplace tag
-- Added a changelog section to the readme
+- Added umbraco-marketplace.json config
+- Added a changelog section to the README
 ### 1.0.2
 - Fixed an issue where the notification handler kept looping while cropping the image if ImageResizeKeepOriginal was turned on
 ### 1.0.1
