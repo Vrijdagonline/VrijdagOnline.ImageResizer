@@ -50,9 +50,10 @@ Change the ImageResizeKeepPreview value to true in appsettings.json
 "ImageResizeKeepPreview": true,
 ```
 # Changelog
+### 1.0.4
+- Added umbraco-marketplace.json config
 ### 1.0.3
 - Added the Umbraco Marketplace tag
-- Added umbraco-marketplace.json config
 - Added a changelog section to the README
 ### 1.0.2
 - Fixed an issue where the notification handler kept looping while cropping the image if ImageResizeKeepOriginal was turned on
