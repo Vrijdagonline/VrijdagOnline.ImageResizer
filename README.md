@@ -10,7 +10,7 @@ Reduce image size that is being uploaded to the back-office by setting a maximum
 # Installation
 Simply add the package using donet add package:
 ```
-dotnet add package VrijdagOnline.ImageResizer --version 1.0.2
+dotnet add package VrijdagOnline.ImageResizer --version 1.0.3
 ```
 
 # Settings
@@ -34,20 +34,31 @@ You can change these default settings by adding the section to the appsettings.j
 ```
 
 # FAQ
-#### Does is work with original images?
+### Does is work with original images?
 Change the ImageResizeApplyToExistingImages value to true in appsettings.json
 ```
 "ImageResizeApplyToExistingImages": true,
 ```
-#### I want to keep the original image
+### I want to keep the original image
 Change the ImageResizeKeepOriginal value to true in appsettings.json
 ```
 "ImageResizeKeepOriginal": true,
 ```
-#### I want to turn on image crop preview
+### I want to turn on image crop preview
 Change the ImageResizeKeepPreview value to true in appsettings.json
 ```
 "ImageResizeKeepPreview": true,
 ```
+# Changelog
+### 1.0.3
+- Added the Umbraco Marketplace tag
+- Added a changelog section to the readme
+### 1.0.2
+- Fixed an issue where the notification handler kept looping while cropping the image if ImageResizeKeepOriginal was turned on
+### 1.0.1
+- Changed Umbraco version to 11+
+### 1.0.0
+- Initial package
+
 # Credits
 To [@prjseal](https://www.github.com/prjsea) who originally created the repo.

@@ -12,9 +12,9 @@
     <PackageProjectUrl>https://github.com/Vrijdagonline/VrijdagOnline.ImageResizer</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/Vrijdagonline/VrijdagOnline.ImageResizer</RepositoryUrl>
-    <PackageTags>umbraco, package, images, resize, back-office, .net core</PackageTags>
+    <PackageTags>umbraco, package, images, resize, back-office, .net core, umbraco-marketplace</PackageTags>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-    <PackageVersion>1.0.2</PackageVersion>
+    <PackageVersion>1.0.3</PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>
