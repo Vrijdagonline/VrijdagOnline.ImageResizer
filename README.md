@@ -50,6 +50,8 @@ Change the ImageResizeKeepPreview value to true in appsettings.json
 "ImageResizeKeepPreview": true,
 ```
 # Changelog
+### 1.0.5
+- changed deprecated IScopeProvider to ICoreScopeProvider
 ### 1.0.4
 - Added umbraco-marketplace.json config
 ### 1.0.3
