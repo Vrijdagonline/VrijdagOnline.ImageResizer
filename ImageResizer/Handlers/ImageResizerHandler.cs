@@ -21,14 +21,14 @@ namespace ImageResizer.Handlers
         private readonly IWebHostEnvironment _hostingEnvironment;
         private readonly IOptions<ImageResizerSettings> _resizerSettings;
         private readonly IMediaService _mediaService;
-        private readonly IScopeProvider _scopeProvider;
+        private readonly ICoreScopeProvider _scopeProvider;
         private readonly MediaUrlGeneratorCollection _mediaUrlGeneratorCollection;
 
         public ImageResizerHandler(IWebHostEnvironment hostingEnvironment,
             IOptions<ImageResizerSettings> resizerSettings,
             IMediaService mediaService,
             MediaUrlGeneratorCollection mediaUrlGeneratorCollection,
-            IScopeProvider scopeProvider)
+            ICoreScopeProvider scopeProvider)
         {
             //Dependency Injection
             _hostingEnvironment = hostingEnvironment;
@@ -92,7 +92,7 @@ namespace ImageResizer.Handlers
                                     if (CreateCroppedVersionOfTheFile(imageSize.Item1, imageSize.Item2, fileNameSuffix, imageResizeKeepOriginal, serverFilePath))
                                     {
 
-                                        using var scope = _scopeProvider.CreateScope(autoComplete: true);
+                                        using var scope = _scopeProvider.CreateCoreScope(autoComplete: true);
                                         using var _ = scope.Notifications.Suppress();
 
                                         mediaItem.SetValue("umbracoWidth", imageSize.Item1);
