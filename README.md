@@ -50,6 +50,8 @@ Change the ImageResizeKeepPreview value to true in appsettings.json
 "ImageResizeKeepPreview": true,
 ```
 # Changelog
+### 1.1.0
+- Fixed an issue where the cropper would ignore maxWidth when both maxWidth and maxHeight are set while cropping
 ### 1.0.5
 - Changed deprecated IScopeProvider to ICoreScopeProvider
 ### 1.0.4
@@ -65,4 +67,4 @@ Change the ImageResizeKeepPreview value to true in appsettings.json
 - Initial package
 
 # Credits
-To [@prjseal](https://www.github.com/prjsea) who originally created the repo.
+To [@prjseal](https://www.github.com/prjseal) who originally created the repo.

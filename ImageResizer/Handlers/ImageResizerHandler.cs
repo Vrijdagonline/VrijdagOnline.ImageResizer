@@ -125,24 +125,32 @@ namespace ImageResizer.Handlers
         /// <returns>The correct width and height for the new file</returns>
         private static Tuple<int, int> GetCorrectWidthAndHeight(int width, int height, bool maintainRatio, double currentWidth, double currentHeight)
         {
-            int newWidth = width;
-            int newHeight = height;
-            if (maintainRatio)
+            int newWidth = (int)currentWidth;
+            int newHeight = (int)currentHeight;
+
+            if (newWidth > width || newHeight > height)
             {
                 double widthToHeightRatio = currentWidth / currentHeight;
-                bool isSquare = widthToHeightRatio == 1;
-                bool isWider = widthToHeightRatio > 1;
-                if (!isSquare && maintainRatio)
+
+                if (widthToHeightRatio > 1)
                 {
-                    if (isWider)
+                    newWidth = width;
+                    newHeight = (int)(newWidth / widthToHeightRatio);
+                    if (newHeight > height)
                     {
+                        newHeight = height;
                         newWidth = (int)(newHeight * widthToHeightRatio);
                     }
-                    else
+                }
+                else
+                {
+                    newHeight = height;
+                    newWidth = (int)(newHeight * widthToHeightRatio);
+                    if (newWidth > width)
                     {
+                        newWidth = width;
                         newHeight = (int)(newWidth / widthToHeightRatio);
                     }
-
                 }
             }
             return new Tuple<int, int>(newWidth, newHeight);
